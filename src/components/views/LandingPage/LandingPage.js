@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Typography, Row, Button } from "antd";
+import { Typography, Row } from "antd";
 import {
   API_URL,
   API_KEY,
   IMAGE_BASE_URL,
   IMAGE_SIZE,
   POSTER_SIZE
-} from "../../Config";
+} from "../../config";
 import MainImage from "./Sections/MainImage";
 import GridCard from "../../commons/GridCards";
 const { Title } = Typography;
@@ -31,9 +31,6 @@ function LandingPage() {
     fetch(endpoint)
       .then(result => result.json())
       .then(result => {
-        // console.log(result)
-        // console.log('Movies',...Movies)
-        // console.log('result',...result.results)
         setMovies([...Movies, ...result.results]);
         setMainMovieImage(MainMovieImage || result.results[0]);
         setCurrentPage(result.page);
@@ -66,7 +63,6 @@ function LandingPage() {
     );
     const windowBottom = windowHeight + window.pageYOffset;
     if (windowBottom >= docHeight - 1) {
-      // loadMoreItems()
       console.log("clicked");
       buttonRef.current.click();
     }
