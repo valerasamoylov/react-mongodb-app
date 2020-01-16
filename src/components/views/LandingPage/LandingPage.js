@@ -1,14 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Typography, Row } from "antd";
-import {
-  API_URL,
-  API_KEY,
-  IMAGE_BASE_URL,
-  IMAGE_SIZE,
-  POSTER_SIZE
-} from "../../config";
-import MainImage from "./Sections/MainImage";
+import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE } from "../../config";
 import GridCard from "../../commons/GridCards";
+
 const { Title } = Typography;
 function LandingPage() {
   const buttonRef = useRef(null);
@@ -41,7 +35,6 @@ function LandingPage() {
   const loadMoreItems = () => {
     let endpoint = "";
     setLoading(true);
-    console.log("CurrentPage", CurrentPage);
     endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=${CurrentPage +
       1}`;
     fetchMovies(endpoint);
@@ -63,21 +56,12 @@ function LandingPage() {
     );
     const windowBottom = windowHeight + window.pageYOffset;
     if (windowBottom >= docHeight - 1) {
-      console.log("clicked");
       buttonRef.current.click();
     }
   };
 
   return (
     <div style={{ width: "100%", margin: "0" }}>
-      {MainMovieImage && (
-        <MainImage
-          image={`${IMAGE_BASE_URL}${IMAGE_SIZE}${MainMovieImage.backdrop_path}`}
-          title={MainMovieImage.original_title}
-          text={MainMovieImage.overview}
-        />
-      )}
-
       <div style={{ width: "85%", margin: "1rem auto" }}>
         <Title level={2}> Popular movies </Title>
         <hr />

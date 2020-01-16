@@ -1,4 +1,5 @@
 @import "~antd/dist/antd.css";
+@import url("https://fonts.googleapis.com/css?family=Caveat&display=swap");
 
 .menu {
   padding: 0 20px;
@@ -15,8 +16,16 @@
 
 .menu__logo a {
   display: inline-block;
-  font-size: 20px;
+  font-size: 34px;
+  font-weight: 700;
   padding: 19px 20px;
+  letter-spacing: 0.2em;
+  color: #000;
+  font-family: "Caveat", cursive;
+}
+
+.menu__logo a:hover {
+  color: #fe2851;
 }
 
 @media (max-width: 767px) {
