@@ -105,7 +105,7 @@ function MovieDetailPage(props) {
       <br />
       <div style={{ width: "100%", margin: "0" }}>
         <div style={{ width: "85%", margin: "1rem auto" }}>
-          <Title level={2}> Similar_Movies </Title>
+          <Title level={2}> Similar Movies </Title>
           <hr />
           <Row gutter={[16, 16]}>
             {Movies &&
