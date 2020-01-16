@@ -4,6 +4,7 @@ import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE } from "../../config";
 import GridCard from "../../commons/GridCards";
 
 const { Title } = Typography;
+
 function LandingPage() {
   const buttonRef = useRef(null);
 

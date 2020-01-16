@@ -1,7 +1,5 @@
 # REACT-MOVIEDB-APP
 
----
-
 REACT-MOVIEDB is a simple movie information engine made with ReactJS and powered by [The Movie DataBase] API.
 
 ### Demo
